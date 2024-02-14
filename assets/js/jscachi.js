@@ -58,4 +58,23 @@ if (veces > 0) {
       alert("Jugada inválida. Por favor, elige piedra, papel o tijera.");
     }
   }
-  
+  // Mostrar el resultado final del juego
+  alert(`El juego ha terminado. El resultado es:`);
+  alert(`Tú: ${puntosUsuario} puntos`);
+  alert(`Computadora: ${puntosComputadora} puntos`);
+
+  // Determinar el ganador del juego
+  if (puntosUsuario > puntosComputadora) {
+    // Felicitar al usuario por ganar el juego
+    alert("¡Felicidades! Has ganado el juego.");
+  } else if (puntosUsuario < puntosComputadora) {
+    // Indicar al usuario que ha perdido el juego
+    alert("Lo siento. Has perdido el juego.");
+  } else {
+    // Declarar un empate en el juego
+    alert("El juego ha quedado en empate.");
+  }
+} else {
+  // Indicar que el número de veces no es válido
+  alert("Número de veces no válido. Por favor, ingresa un número positivo y mayor que cero.");
+}
