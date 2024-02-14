@@ -35,4 +35,11 @@ if (veces > 0) {
       alert(`La computadora elige: ${jugadaComputadora}`);
 
       // Definir a un ganador considerando la jugada del usuario y la generada automáticamente para la máquina
-      if (jugadaUsuario === jugadaComputadora) {    
+      if (jugadaUsuario === jugadaComputadora) {   
+        // Declarar un empate
+        console.log("Es un empate.");
+      } else if (
+        (jugadaUsuario === "piedra" && jugadaComputadora === "tijera") ||
+        (jugadaUsuario === "papel" && jugadaComputadora === "piedra") ||
+        (jugadaUsuario === "tijera" && jugadaComputadora === "papel")
+      ) {      
