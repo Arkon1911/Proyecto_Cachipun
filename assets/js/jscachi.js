@@ -42,4 +42,20 @@ if (veces > 0) {
         (jugadaUsuario === "piedra" && jugadaComputadora === "tijera") ||
         (jugadaUsuario === "papel" && jugadaComputadora === "piedra") ||
         (jugadaUsuario === "tijera" && jugadaComputadora === "papel")
-      ) {      
+      ) {  
+        // Felicitar al ganador en caso de ser el usuario
+        alert("¡Ganaste esta ronda!");
+        // Sumar un punto al usuario
+        puntosUsuario++;
+      } else {
+        // Indicarle al usuario que ha perdido contra la máquina
+        alert("Perdiste esta ronda.");
+        // Sumar un punto a la computadora
+        puntosComputadora++;
+      }
+    } else {
+      // Indicar que la jugada del usuario no es válida
+      alert("Jugada inválida. Por favor, elige piedra, papel o tijera.");
+    }
+  }
+  
