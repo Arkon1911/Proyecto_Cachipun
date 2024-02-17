@@ -19,50 +19,50 @@ if (veces > 0) {
       let jugadaMaquina = opciones[Math.floor(Math.random() * opciones.length)];
 
       // Mostrar las jugadas
-      alert("Tú eliges: " + jugadaUsuario);
-      alert("La máquina elige: " + jugadaMaquina);
+      console.log("Tú eliges: " + jugadaUsuario);
+      console.log("La máquina elige: " + jugadaMaquina);
 
       // Definir a un ganador considerando la jugada del usuario y la generada automáticamente para la máquina
       if (jugadaUsuario === jugadaMaquina) {
         // Declarar un empate
-        alert("Es un empate.");
+        console.log("Es un empate.");
       } else if (
         (jugadaUsuario === "piedra" && jugadaMaquina === "tijeras") ||
         (jugadaUsuario === "papel" && jugadaMaquina === "piedra") ||
         (jugadaUsuario === "tijeras" && jugadaMaquina === "papel")
       ) {
         // Felicitar al ganador en caso de ser el usuario
-        alert("¡Ganaste! " + jugadaUsuario + " le gana a " + jugadaMaquina + ".");
+        console.log("¡Ganaste! " + jugadaUsuario + " le gana a " + jugadaMaquina + ".");
         // Sumar un punto al usuario
         puntosUsuario++;
       } else {
         // Indicarle al usuario que ha perdido contra la máquina
-        alert("Perdiste. " + jugadaMaquina + " le gana a " + jugadaUsuario + ".");
+        console.log("Perdiste. " + jugadaMaquina + " le gana a " + jugadaUsuario + ".");
         // Sumar un punto a la máquina
         puntosMaquina++;
       }
     } else {
       // Indicar que la jugada del usuario es inválida
-      alert("Jugada inválida. Por favor, elige piedra, papel o tijeras.");
+      console.log("Jugada inválida. Por favor, elige piedra, papel o tijeras.");
     }
   }
 
   // Mostrar el resultado final del juego
-  alert("Fin del juego.");
-  alert("Tus puntos: " + puntosUsuario);
-  alert("Puntos de la máquina: " + puntosMaquina);
+  console.log("Fin del juego.");
+  console.log("Tus puntos: " + puntosUsuario);
+  console.log("Puntos de la máquina: " + puntosMaquina);
 
   if (puntosUsuario > puntosMaquina) {
     // Felicitar al usuario por ganar el juego
-    alert("¡Felicidades! Has ganado el juego.");
+    console.log("¡Felicidades! Has ganado el juego.");
   } else if (puntosUsuario < puntosMaquina) {
     // Consolar al usuario por perder el juego
-    alert("Lo siento. Has perdido el juego.");
+    console.log("Lo siento. Has perdido el juego.");
   } else {
     // Declarar un empate en el juego
-    alert("Has empatado el juego.");
+    console.log("Has empatado el juego.");
   }
 } else {
   // Indicar que el número de veces no es válido
-  alert("Número de veces no válido. Por favor, ingresa un número positivo.");
+  console.log("Número de veces no válido. Por favor, ingresa un número positivo.");
 }
